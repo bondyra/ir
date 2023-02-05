@@ -10,8 +10,8 @@ import (
 func Execute(args []string) {
 	switch args[0] {
 	case "config":
-		handler.ConfigHandler{Args: args[1:]}.Execute(config.Config{})
+		panic("dupa")
 	default:
-		handler.QueryHandler{Query: strings.Join(args[1:], " ")}.Execute(config.Config{})
+		handler.QueryHandler{Query: strings.Join(args, " ")}.Execute(config.Config{})
 	}
 }
